@@ -46,14 +46,13 @@ int main(){
 	struct sfecha fechaVencida;
 	int contador=0;
 	char rta='s';
-	float aux;
 	int fechaMed, fechaTest;
 	FILE *f,*nv,*v;
 
 	f=fopen("medicinas.dat","wb+");
 	if(f==NULL)
 	{
-		puts("No se puede abrir el archivo");
+		puts("No se puede crear el archivo");
 		return 1;
 	}
 
