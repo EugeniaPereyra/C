@@ -140,7 +140,8 @@ int main(){
 
 	fclose(f);
 
-	fseek(v,0,SEEK_SET);
+	rewind(v);
+	
 	printf("\n-------------- MEDICAMENTOS VENCIDOS Y ELIMINADOS ---------------------\n");
 	printf("CODIGO -------------- DESCRIPCION ------------------------------ STOCK\n");
 	fread(&medicinas,sizeof(medicinas),1,v);
@@ -152,7 +153,8 @@ int main(){
 
 	fclose(v);
 
-	fseek(nv,0,SEEK_SET);
+	rewind(nv);
+	
 	printf("\n---------------- MEDICAMENTOS NO VENCIDOS -----------------------------\n");
 	printf("CODIGO -------------- DESCRIPCION ------------------------------ STOCK\n");
 	fread(&medicinas,sizeof(medicinas),1,nv);
